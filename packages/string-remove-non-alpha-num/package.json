@@ -1,6 +1,6 @@
 {
   "name": "@petitchevalroux/string-remove-non-alpha-num",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Remove non alpha numeric characters",
   "main": "src/index.js",
   "scripts": {
