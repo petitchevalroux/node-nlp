@@ -8,5 +8,9 @@
   "dependencies": {
     "@petitchevalroux/corpus": "^1.0.0",
     "@petitchevalroux/vector-bow-frequency": "^1.0.0"
+  },
+  "gitHead": "89f3e9ccafd54029c62ef9ec065947ceff0a608c",
+  "publishConfig": {
+    "access": "public"
   }
 }

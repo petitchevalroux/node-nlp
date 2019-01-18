@@ -22,5 +22,9 @@
   },
   "dependencies": {
     "remove-accents-diacritics": "^1.0.2"
+  },
+  "gitHead": "89f3e9ccafd54029c62ef9ec065947ceff0a608c",
+  "publishConfig": {
+    "access": "public"
   }
 }
