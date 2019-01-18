@@ -26,7 +26,7 @@ describe("VectorBowFrequency", () => {
     describe("getVector", () => {
         it("return frequency vector", () => {
             return getCorpus()
-                .then(corpus => vector.getVector(["le", "navire", "glissant", "sur", "grouffres", "amers"], corpus))
+                .then(corpus => vector.getVector(["le", "navire", "sur", "glissant", "le", "sur", "grouffres", "amers", "le"], corpus))
                 .then(vector => {
                     assert.deepEqual([0,
                         0,
@@ -39,11 +39,11 @@ describe("VectorBowFrequency", () => {
                         0,
                         0,
                         0,
-                        1,
+                        3,
                         0,
                         1,
                         1,
-                        1,
+                        2,
                         1,
                         1,
                         0,
@@ -87,7 +87,7 @@ describe("VectorBowFrequency", () => {
     describe("getWordsMap", () => {
         it("return frequency vector", () => {
             return getCorpus()
-                .then(corpus => vector.getWordsMap(["le", "navire", "glissant", "sur", "grouffres", "amers"], corpus))
+                .then(corpus => vector.getWordsMap(["le", "navire", "sur", "glissant", "le", "sur", "grouffres", "amers", "le"], corpus))
                 .then(wordsMap => {
                     assert.deepEqual(
                         Array.from(wordsMap),
@@ -103,11 +103,11 @@ describe("VectorBowFrequency", () => {
                             ['compagnons', 0],
                             ['de', 0],
                             ['voyage', 0],
-                            ['le', 1],
+                            ['le', 3],
                             ['s’amuser', 0],
                             ['navire', 1],
                             ['glissant', 1],
-                            ['sur', 1],
+                            ['sur', 2],
                             ['grouffres', 1],
                             ['amers', 1],
                             ['a', 0],
