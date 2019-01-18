@@ -14,5 +14,5 @@ clean:
 .build/install: .build/build package.json
 	npm install && touch $@
 
-.build/tests:
+.build/tests: .build/build
 	touch $@
