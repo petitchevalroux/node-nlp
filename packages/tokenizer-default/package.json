@@ -1,6 +1,6 @@
 {
   "name": "@petitchevalroux/tokenizer-default",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Default tokenizer",
   "main": "src/index.js",
   "directories": {
@@ -24,9 +24,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@petitchevalroux/string-lower-case": "^1.0.0",
-    "@petitchevalroux/string-remove-accents": "^1.0.0",
-    "@petitchevalroux/string-remove-non-alpha-num": "^1.0.0"
+    "@petitchevalroux/string-lower-case": "^1.0.1",
+    "@petitchevalroux/string-remove-accents": "^1.0.1",
+    "@petitchevalroux/string-remove-non-alpha-num": "^1.0.1"
   },
   "gitHead": "89f3e9ccafd54029c62ef9ec065947ceff0a608c",
   "publishConfig": {
