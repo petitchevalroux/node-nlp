@@ -1,4 +1,5 @@
 LERNA=./node_modules/.bin/lerna
+LERNA_UPDATE=./node_modules/.bin/lernaupdate
 
 .PHONY: tests
 tests: $(LERNA)
@@ -8,7 +9,13 @@ tests: $(LERNA)
 clean: $(LERNA)
 	lerna exec make clean && rm -rf .build
 
+.PHONY: update-wizard
+update-wizard: $(LERNA_UPDATE)
+	$(LERNA_UPDATE)
+
 $(LERNA): .build/install
+
+$(LERNA_UPDATE): .build/install
 
 .build/build: Makefile
 	mkdir -p .build && touch $@
