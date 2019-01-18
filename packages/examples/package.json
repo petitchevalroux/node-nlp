@@ -1,0 +1,9 @@
+{
+  "name": "@petitchevalroux/nlp-samples",
+  "version": "1.0.0",
+  "description": "Examples for NLP libraries",
+  "dependencies": {
+    "@petitchevalroux/corpus": "^1.0.0",
+    "@petitchevalroux/vector-bow-frequency": "^1.0.0"
+  }
+}
