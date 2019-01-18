@@ -27,5 +27,9 @@
     "@petitchevalroux/string-lower-case": "^1.0.0",
     "@petitchevalroux/string-remove-accents": "^1.0.0",
     "@petitchevalroux/string-remove-non-alpha-num": "^1.0.0"
+  },
+  "gitHead": "89f3e9ccafd54029c62ef9ec065947ceff0a608c",
+  "publishConfig": {
+    "access": "public"
   }
 }
