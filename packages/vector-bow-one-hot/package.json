@@ -1,6 +1,6 @@
 {
   "name": "@petitchevalroux/vector-bow-one-hot",
-  "version": "1.0.4",
+  "version": "1.1.0",
   "description": "Vectorize bag of words with one hot",
   "main": "src/index.js",
   "scripts": {
@@ -21,7 +21,7 @@
   "author": "Patrick Poulain",
   "license": "ISC",
   "devDependencies": {
-    "@petitchevalroux/corpus": "^1.0.1",
+    "@petitchevalroux/corpus": "^1.1.0",
     "eslint": "^5.11.1",
     "eslint-plugin-promise": "^4.0.1",
     "istanbul": "^0.4.5",
@@ -30,7 +30,7 @@
     "sinon": "^7.2.2"
   },
   "dependencies": {
-    "@petitchevalroux/vector-bow-frequency": "^1.0.4"
+    "@petitchevalroux/vector-bow-frequency": "^1.1.0"
   },
   "gitHead": "89f3e9ccafd54029c62ef9ec065947ceff0a608c",
   "publishConfig": {

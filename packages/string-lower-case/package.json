@@ -1,6 +1,6 @@
 {
   "name": "@petitchevalroux/string-lower-case",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Transform string to lower case",
   "main": "src/index.js",
   "scripts": {
