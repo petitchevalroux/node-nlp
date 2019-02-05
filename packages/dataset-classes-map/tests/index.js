@@ -20,4 +20,10 @@ describe("ClassesMap", () => {
             assert.deepEqual(map.toIntegers(), [0, 1, 2, 0]);
         });
     });
+
+    describe("constructor", () => {
+        it("works without params", () => {
+            assert.deepEqual((new ClassesMap()).toIntegers(),[]);
+        });
+    });
 });

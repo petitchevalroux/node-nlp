@@ -7,8 +7,8 @@ class ClassesMap {
      */
     constructor(classes) {
         this.map = new Map();
-        this.classes = classes;
-        for (const className of classes) {
+        this.classes = Array.from(classes ? classes : []);
+        for (const className of this.classes) {
             if (!this.has(className)) {
                 this.map.set(className, this.map.size);
             }
