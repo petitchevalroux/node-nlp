@@ -35,4 +35,10 @@ describe("ClassesMap", () => {
             assert.equal(map.add("class4"), 3);
         });
     });
+
+    describe("getClass", () => {
+        it("return class from integer if exists", () => {
+            assert.equal(map.getClass(2), "class3");
+        });
+    });
 });

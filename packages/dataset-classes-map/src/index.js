@@ -8,7 +8,8 @@ class ClassesMap {
      * @param {Iterator} classes classes as string
      */
     constructor(classes) {
-        this.map = new Map();
+        this.classesToIntegers = new Map();
+        this.integersToClasses = new Map();
         this.classes = Array.from(classes ? classes : []);
         for (const className of this.classes) {
             this.add(className);
@@ -32,7 +33,7 @@ class ClassesMap {
      * @returns {Boolean}
      */
     has(className) {
-        return this.map.has(className);
+        return this.classesToIntegers.has(className);
     }
 
     /**
@@ -41,7 +42,7 @@ class ClassesMap {
      * @returns {Integer}
      */
     get(className) {
-        const index = this.map.get(className);
+        const index = this.classesToIntegers.get(className);
         if (!Number.isInteger(index)) {
             if (index === undefined) {
                 throw Object
@@ -72,13 +73,32 @@ class ClassesMap {
             return index;
         } catch (error) {
             if (error.code === ClassesMap.ERROR_NOT_EXISTS) {
-                const size = this.map.size;
-                this.map.set(className, size);
+                const size = this.classesToIntegers.size;
+                this.integersToClasses.set(size, className);
+                this.classesToIntegers.set(className, size);
                 return size;
             } else {
                 throw error;
             }
         }
+    }
+
+    /**
+     * Return class from integer
+     * @param {Integer} integer
+     * @returns {String}
+     */
+    getClass(integer) {
+        const label = this.integersToClasses.get(integer);
+        if (label === undefined) {
+            throw Object
+                .assign(
+                    new Error(`${className} does not exist`), {
+                        code: ClassesMap.ERROR_NOT_EXISTS
+                    }
+                );
+        }
+        return label;
     }
 }
 
