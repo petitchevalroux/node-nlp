@@ -1,17 +1,17 @@
 "use strict";
 
 class ClassesMap {
+
+
     /**
      * Constructor
      * @param {Iterator} classes classes as string
      */
     constructor(classes) {
         this.map = new Map();
-        this.classes = classes;
-        for (const className of classes) {
-            if (!this.has(className)) {
-                this.map.set(className, this.map.size);
-            }
+        this.classes = Array.from(classes ? classes : []);
+        for (const className of this.classes) {
+            this.add(className);
         }
     }
 
@@ -43,10 +43,57 @@ class ClassesMap {
     get(className) {
         const index = this.map.get(className);
         if (!Number.isInteger(index)) {
-            throw new Error(`${index} is not an integer for ${className}`);
+            if (index === undefined) {
+                throw Object
+                    .assign(
+                        new Error(`${className} does not exist`), {
+                            code: ClassesMap.ERROR_NOT_EXISTS
+                        }
+                    );
+            }
+            throw Object
+                .assign(
+                    new Error(`${index} is not an integer for ${className}`), {
+                        code: ClassesMap.ERROR_NOT_INTEGER
+                    }
+                );
         }
         return index;
     }
+
+    /**
+     * Add className to map and return its integer value
+     * @param {String} className
+     * @returns {Integer} 
+     */
+    add(className) {
+        try {
+            const index = this.get(className);
+            return index;
+        } catch (error) {
+            if (error.code === ClassesMap.ERROR_NOT_EXISTS) {
+                const size = this.map.size;
+                this.map.set(className, size);
+                return size;
+            } else {
+                throw error;
+            }
+        }
+    }
 }
+
+Object.defineProperty(ClassesMap, 'ERROR_NOT_INTEGER', {
+    value: 1,
+    writable: false,
+    enumerable: true,
+    configurable: false
+});
+
+Object.defineProperty(ClassesMap, 'ERROR_NOT_EXISTS', {
+    value: 2,
+    writable: false,
+    enumerable: true,
+    configurable: false
+});
 
 module.exports = ClassesMap;
