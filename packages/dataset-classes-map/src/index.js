@@ -100,6 +100,29 @@ class ClassesMap {
         }
         return label;
     }
+
+    /**
+     * Return json string
+     * @returns String
+     */
+    toJSON() {
+        return JSON.stringify({
+            classesToIntegers: Array.from(this.classesToIntegers.entries()),
+            integersToClasses: Array.from(this.integersToClasses.entries()),
+            classes: this.classes
+        });
+    }
+
+    /**
+     * Load from json string
+     * @param {String} json
+     */
+    fromJSON(json) {
+        const data = JSON.parse(json);
+        this.classesToIntegers = new Map(data.classesToIntegers);
+        this.integersToClasses = new Map(data.integersToClasses);
+        this.classes = data.classes;
+    }
 }
 
 Object.defineProperty(ClassesMap, 'ERROR_NOT_INTEGER', {
