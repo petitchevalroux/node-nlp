@@ -1,6 +1,6 @@
 {
   "name": "@petitchevalroux/cli-remove-diacritics",
-  "version": "1.8.0",
+  "version": "1.9.0",
   "description": "cli removing diacritics and accents from stdin",
   "main": "src/index.js",
   "scripts": {
