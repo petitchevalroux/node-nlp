@@ -1,6 +1,6 @@
 {
   "name": "@petitchevalroux/stream-remove-diacritics",
-  "version": "1.6.1",
+  "version": "1.8.0",
   "description": "Transform stream removing diacritics and accents",
   "main": "src/index.js",
   "scripts": {
