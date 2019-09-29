@@ -18,19 +18,33 @@ describe("stream-words", () => {
             inputStream = new PassThroughStream();
         inputStream.pipe(transform).pipe(outputStream);
         outputStream.on("finish", () => {
-            assert.deepEqual(result,[ 'Lorem',
-            'ipsum',
-            '02192',
-            'sit',
-            'amet',
-            'foo',
-            'bar',
-            'Etiam',
-            'facilisis' ]);
+            assert.deepEqual(
+                result,
+                [
+                    'Lorem',
+                    '02192',
+                    'amet',
+                    'foo',
+                    'bar',
+                    'Etiam',
+                    'facilisis',
+                    'lola',
+                    'li',
+                    'fo'
+                ]
+            );
             done();
         });
-        inputStream.push("Lorem ipsum 02192 sit amet\nfoo \rbar.")
-        inputStream.push(",Etiam facilisis");
+        inputStream.push(".Lorem 02192 amet\nfoo \rbar.") // Remove initial 
+        // Split between chunks when previous chunk end with separator and actual chunk begin with separator 
+        inputStream.push(",Etiam facilisis lo");
+        // Concat between chunk 
+        inputStream.push("la.");
+        // Split between chunk when previous chunk end with separator
+        inputStream.push("li");
+        // Split between chunks when actual chunk begin with separator
+        // No split when last chunk end with separator
+        inputStream.push(".fo?");
         inputStream.push(null);
     });
 

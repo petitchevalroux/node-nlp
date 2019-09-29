@@ -9,6 +9,11 @@ const TransformStream = require("stream").Transform,
 
 module.exports = multipipe(new TransformStream({
     transform: (chunk, encoding, callback) => {
-        callback(null, chunk.toString().replace(regSeparator, " ").replace(regMultipleSpaces, " ").trim() + " ");
+        this.firstChunk = typeof (this.firstChunk) === "undefined";
+        this.previousEndWithSeparator = this.previousEndWithSeparator || false;
+        const string = chunk.toString().replace(regSeparator, " ").replace(regMultipleSpaces, " "),
+            result = (!this.firstChunk && (this.previousEndWithSeparator || string.charAt(0) === " ") ? " " : "") + string.trim();
+        this.previousEndWithSeparator = string.slice(-1) === " ";
+        callback(null, result);
     }
 }), split2(" "));
