@@ -1,0 +1,29 @@
+{
+  "name": "@petitchevalroux/string-remove-diacritics",
+  "version": "1.0.0",
+  "description": "Function removing diacritics and accents",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "make tests"
+  },
+  "author": "Patrick Poulain",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://github.com/petitchevalroux/node-nlp/packages/string-remove-diacritics"
+  },
+  "devDependencies": {
+    "eslint": "^5.11.1",
+    "eslint-plugin-promise": "^4.0.1",
+    "istanbul": "^0.4.5",
+    "js-beautify": "^1.8.9",
+    "mocha": "^5.2.0",
+    "sinon": "^7.2.2"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "diacritics": "^1.3.0"
+  }
+}
