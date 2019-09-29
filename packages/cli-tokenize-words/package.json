@@ -1,7 +1,7 @@
 {
-  "name": "@petitchevalroux/stream-words",
-  "version": "1.6.1",
-  "description": "Transform stream emitting one chunk by words",
+  "name": "@petitchevalroux/cli-tokenize-words",
+  "version": "1.11.0",
+  "description": "cli tokenizing stdin to words (one per line)",
   "main": "src/index.js",
   "scripts": {
     "test": "make tests"
@@ -10,7 +10,7 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git+ssh://github.com/petitchevalroux/node-nlp/packages/stream-words"
+    "url": "git+ssh://github.com/petitchevalroux/node-nlp/packages/cli-tokenize-words"
   },
   "devDependencies": {
     "eslint": "^5.11.1",
@@ -20,12 +20,14 @@
     "mocha": "^5.2.0",
     "sinon": "^7.2.2"
   },
-  "dependencies": {
-    "multipipe": "^3.0.1",
-    "split2": "^3.1.1",
-    "xregexp": "^4.2.4"
-  },
   "publishConfig": {
     "access": "public"
+  },
+  "dependencies": {
+    "@petitchevalroux/stream-words": "^1.6.1",
+    "yargs": "^14.0.0"
+  },
+  "bin": {
+    "nlp-tokenize-words": "./src/cli.js"
   }
 }
