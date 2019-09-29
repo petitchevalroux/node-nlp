@@ -1,0 +1,33 @@
+{
+  "name": "@petitchevalroux/cli-remove-diacritics",
+  "version": "1.8.0",
+  "description": "cli removing diacritics and accents from stdin",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "make tests"
+  },
+  "author": "Patrick Poulain",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://github.com/petitchevalroux/node-nlp/packages/cli-remove-diacritics"
+  },
+  "devDependencies": {
+    "eslint": "^5.11.1",
+    "eslint-plugin-promise": "^4.0.1",
+    "istanbul": "^0.4.5",
+    "js-beautify": "^1.8.9",
+    "mocha": "^5.2.0",
+    "sinon": "^7.2.2"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@petitchevalroux/stream-remove-diacritics": "^1.8.0",
+    "yargs": "^14.0.0"
+  },
+  "bin": {
+    "nlp-remove-diacritics": "./src/cli.js"
+  }
+}
