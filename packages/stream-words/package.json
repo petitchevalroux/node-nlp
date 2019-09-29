@@ -1,6 +1,6 @@
 {
   "name": "@petitchevalroux/stream-words",
-  "version": "1.1.0",
+  "version": "1.6.0",
   "description": "Transform stream emitting words",
   "main": "src/index.js",
   "scripts": {
