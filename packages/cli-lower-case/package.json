@@ -1,6 +1,6 @@
 {
   "name": "@petitchevalroux/cli-lower-case",
-  "version": "1.9.0",
+  "version": "1.11.0",
   "description": "cli transforming stdin to lower case",
   "main": "src/index.js",
   "scripts": {
