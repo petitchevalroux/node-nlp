@@ -1,6 +1,6 @@
 {
   "name": "@petitchevalroux/stream-lower-case",
-  "version": "1.8.0",
+  "version": "1.10.0",
   "description": "Transform stream to lower case",
   "main": "src/index.js",
   "scripts": {
