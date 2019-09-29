@@ -1,6 +1,6 @@
 {
   "name": "@petitchevalroux/stream-words",
-  "version": "1.6.1",
+  "version": "1.12.0",
   "description": "Transform stream emitting one chunk by words",
   "main": "src/index.js",
   "scripts": {
