@@ -7,7 +7,7 @@ tests: $(LERNA)
 
 .PHONY: clean
 clean: $(LERNA)
-	lerna exec make clean && rm -rf .build
+	lerna exec make clean && rm -rf .build ./node_modules
 
 .PHONY: update-wizard
 update-wizard: $(LERNA_UPDATE)

@@ -3,6 +3,10 @@
   "private": true,
   "devDependencies": {
     "lerna": "^3.8.0",
-    "lerna-update-wizard": "^0.11.1"
+    "lerna-update-wizard": "^0.11.1",
+    "mocha": "^6.2.1"
+  },
+  "dependencies": {
+    "lerna": "^3.16.4"
   }
 }

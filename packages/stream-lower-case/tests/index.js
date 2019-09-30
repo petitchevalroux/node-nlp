@@ -6,8 +6,8 @@ const path = require("path"),
     PassThroughStream = require("stream").PassThrough;
 
 
-describe("stream-remove-diacritics", () => {
-    it("remove diacritics", (done) => {
+describe("stream-lower-case", () => {
+    it("lower case", (done) => {
         const result = [],
             outputStream = new WritableStream({
                 write: (chunk, encoding, callback) => {

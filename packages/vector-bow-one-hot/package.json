@@ -20,19 +20,9 @@
   ],
   "author": "Patrick Poulain",
   "license": "ISC",
-  "devDependencies": {
-    "@petitchevalroux/corpus": "^1.1.0",
-    "eslint": "^5.11.1",
-    "eslint-plugin-promise": "^4.0.1",
-    "istanbul": "^0.4.5",
-    "js-beautify": "^1.8.9",
-    "mocha": "^5.2.0",
-    "sinon": "^7.2.2"
-  },
   "dependencies": {
     "@petitchevalroux/vector-bow-frequency": "^1.1.0"
   },
-  "gitHead": "89f3e9ccafd54029c62ef9ec065947ceff0a608c",
   "publishConfig": {
     "access": "public"
   }
