@@ -1,6 +1,6 @@
 {
   "name": "@petitchevalroux/dataset-stream-to-xy",
-  "version": "1.1.0",
+  "version": "1.12.1",
   "description": "Transform dataset stream to XY array",
   "main": "src/index.js",
   "scripts": {

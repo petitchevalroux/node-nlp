@@ -1,14 +1,14 @@
 {
   "name": "@petitchevalroux/nlp-samples",
-  "version": "1.1.0",
+  "version": "1.12.1",
   "description": "Examples for NLP libraries",
   "scripts": {
     "test": "echo 'no tests'"
   },
   "dependencies": {
-    "@petitchevalroux/corpus": "^1.1.0",
-    "@petitchevalroux/vector-bow-frequency": "^1.1.0",
-    "@petitchevalroux/vector-bow-one-hot": "^1.1.0"
+    "@petitchevalroux/corpus": "^1.12.1",
+    "@petitchevalroux/vector-bow-frequency": "^1.12.1",
+    "@petitchevalroux/vector-bow-one-hot": "^1.12.1"
   },
   "gitHead": "89f3e9ccafd54029c62ef9ec065947ceff0a608c",
   "publishConfig": {

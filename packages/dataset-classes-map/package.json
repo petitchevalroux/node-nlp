@@ -1,6 +1,6 @@
 {
   "name": "@petitchevalroux/dataset-classes-map",
-  "version": "1.5.0",
+  "version": "1.12.1",
   "description": "Allow to transform string classes to integers",
   "main": "src/index.js",
   "scripts": {

@@ -1,6 +1,6 @@
 {
   "name": "@petitchevalroux/cli-remove-diacritics",
-  "version": "1.9.0",
+  "version": "1.12.1",
   "description": "cli removing diacritics and accents from stdin",
   "main": "src/index.js",
   "scripts": {
@@ -16,7 +16,7 @@
     "access": "public"
   },
   "dependencies": {
-    "@petitchevalroux/stream-remove-diacritics": "^1.8.0",
+    "@petitchevalroux/stream-remove-diacritics": "^1.12.1",
     "yargs": "^14.0.0"
   },
   "bin": {

@@ -1,6 +1,6 @@
 {
   "name": "@petitchevalroux/cli-lower-case",
-  "version": "1.11.0",
+  "version": "1.12.1",
   "description": "cli transforming stdin to lower case",
   "main": "src/index.js",
   "scripts": {
@@ -16,7 +16,7 @@
     "access": "public"
   },
   "dependencies": {
-    "@petitchevalroux/stream-lower-case": "^1.10.0",
+    "@petitchevalroux/stream-lower-case": "^1.12.1",
     "yargs": "^14.0.0"
   },
   "bin": {
