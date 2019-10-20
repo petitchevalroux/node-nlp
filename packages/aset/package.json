@@ -1,0 +1,21 @@
+{
+  "name": "@petitchevalroux/aset",
+  "version": "1.0.0",
+  "description": "async set",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "make tests"
+  },
+  "author": "Patrick Poulain",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://github.com/petitchevalroux/node-nlp/packages/aset"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "into-stream": "^4.0.0"
+  }
+}
